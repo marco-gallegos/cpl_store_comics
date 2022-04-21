@@ -44,6 +44,4 @@ APP_CONFIG = {
     "DB_PORT": port_db,
     "MONGO_URL": os.getenv("MONGO_URL") if os.getenv("MONGO_URL") else "mongodb://localhost:27017/",
     "API_GET_COMICS": os.getenv("API_GET_COMICS"),
-    "API_STORE_MY_COMICS": os.getenv("API_STORE_MY_COMICS"),
-    "API_GET_MY_COMICS": os.getenv("API_GET_MY_COMICS"),
 }

@@ -19,3 +19,4 @@ pendulum
 python-dotenv
 pytest
 pymongo
+requests

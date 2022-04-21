@@ -7,32 +7,16 @@ client = \
 
 db = client.coppel
 
-new_user = {
-    "name": "Marco",
-    "age": "27",
-    "email": "noexiste@hotmail.com.crazy",
-    "password": "123456",
-}
-
 # db.users.insert_one(new_user)
 
 # print(db.users.find_one())
 
 
-def store_user(user):
-    db.users.insert_one(user)
-
-
-def get_user(email):
-    print(email)
-    return db.users.find_one({"email": email})
-
-
-def verify_password(password, hash):
-    return sha256.verify(password, hash)
-
-
-def generate_hash(password):
-    return sha256.hash(password)
+def store_comic(comic):
+    try:
+        db.user_comics.insert_one(comic)
+        return True
+    except Exception as e:
+        print(e)
 
 
